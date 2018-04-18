@@ -22,7 +22,7 @@ class Collection:
             self.deck.append(getattr(self, 'death_stone').DeathStone())
             self.c_deck.append(getattr(self, 'death_stone').DeathStone())
 
-        for _ in range(0, 3000):
+        for _ in range(0, 3):
             self.deck.append(getattr(self, 'warlock').Warlock())
             self.c_deck.append(getattr(self, 'warlock').Warlock())
 

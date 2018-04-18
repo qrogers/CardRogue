@@ -20,6 +20,8 @@ class Necromancer(being.Being):
          'health': 3}
     ]
 
+    text = 'Cast: Resurrect a being in your grave'
+
     def __init__(self):
         super().__init__()
         self.subtype = being.Being.Subtype.NECROMANCER

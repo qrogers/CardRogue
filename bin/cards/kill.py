@@ -14,6 +14,8 @@ class Kill(spell.Spell):
         {'manacost': 1}
     ]
 
+    text = 'Kill target being'
+
     def __init__(self):
         super().__init__()
         self.subtype = spell.Spell.Subtype.NECROMANCY

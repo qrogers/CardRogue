@@ -20,6 +20,8 @@ class Warlock(being.Being):
          'health': 2}
     ]
 
+    text = 'Whenever Warlock enters the field, draw a card'
+
     def __init__(self):
         super().__init__()
         self.subtype = being.Being.Subtype.NECROMANCER

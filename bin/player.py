@@ -6,7 +6,7 @@ class Player:
         self.field = field
         self.inventory = inventory
         self.grave = grave
-        self.manapool = manapool + [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        self.manapool = manapool# + [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
         self.owner = self
         self.enemy = None

@@ -82,6 +82,17 @@ class Game:
 
         self.end()
 
+    def game_state(self):
+        state = dict()
+
+        state['player_health'] = self.h_player.health
+        state['enemy_health'] = self.c_player.health
+        state['player_mana'] = self.h_player.mana
+        state['enemy_mana'] = self.c_player.mana
+        state['player_manapool'] = [a_card.info() for a_card in self.h_player.manapool]
+
+        return state
+
     @staticmethod
     def shuffle(deck):
         random.shuffle(deck)
@@ -231,4 +242,4 @@ class Game:
         elif a_player is self.c_player:
             return self.h_player
         else:
-            raise Exception("INVALID PLAYER")
+            raise Exception("INVALID_PLAYER")

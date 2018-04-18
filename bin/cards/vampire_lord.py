@@ -24,9 +24,16 @@ class VampireLord(being.Being):
          'heal': 7}
     ]
 
+    text = 'Whenever Vampire Lord attack, you heal {}'
+
     def __init__(self):
         super().__init__()
         self.subtype = being.Being.Subtype.NECROMANCER
+
+    def info(self):
+        card_info = super().info()
+        card_info['text'] = self.text.format(self.get_stat('heal'))
+        return card_info
 
     def effect(self, target, game):
         game.attack_being_triggers.append(self.heal_owner)

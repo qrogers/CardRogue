@@ -14,6 +14,8 @@ class Entomb(spell.Spell):
         {'manacost': 1}
     ]
 
+    text = 'Put a being in your deck into your grave'
+
     def __init__(self):
         super().__init__()
         self.subtype = spell.Spell.Subtype.NECROMANCY

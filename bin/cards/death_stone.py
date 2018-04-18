@@ -17,6 +17,9 @@ class DeathStone(item.Item):
          'damage': 4}
     ]
 
+    text = 'Charge: Whenever a being dies' \
+           'Activate 2: Resurrect target being in your grave'
+
     def __init__(self):
         super().__init__()
         self.subtype = item.Item.Subtype.ARTIFACT

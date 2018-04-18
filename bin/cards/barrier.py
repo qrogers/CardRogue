@@ -4,18 +4,16 @@ import item
 class Barrier(item.Item):
 
     stats = [
-        {'manacost': 1,
-         'damage': 2},
+        {'manacost': 1},
 
-        {'manacost': 1,
-         'damage': 3},
+        {'manacost': 1},
 
-        {'manacost': 1,
-         'damage': 4},
+        {'manacost': 1},
 
-        {'manacost': 0,
-         'damage': 5}
+        {'manacost': 0}
     ]
+
+    text = 'Reduces all damage dealt to you by 1'
 
     def __init__(self):
         super().__init__()

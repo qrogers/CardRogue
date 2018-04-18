@@ -11,6 +11,7 @@ class Card:
         SPELL = enum.auto()
 
     stats = []
+    text = ''
 
     def __init__(self):
         self.experience = 0
@@ -20,6 +21,20 @@ class Card:
         self.name = self.__class__.__name__
 
         self.update_stats()
+
+    def info(self):
+        card_info = dict()
+
+        card_info['name'] = self.name
+        card_info['text'] = self.text
+        card_info['cost'] = self.get_manacost()
+        card_info['experience'] = self.experience
+        card_info['type'] = str(self.type)
+
+        return card_info
+
+    def get_stat(self, stat):
+        return self.stats[self.get_level()][stat]
 
     def update_stats(self):
         for stat in self.stats[self.get_level()]:

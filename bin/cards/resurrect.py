@@ -13,6 +13,8 @@ class Resurrect(spell.Spell):
         {'manacost': 1}
     ]
 
+    text = 'Resurrect a being in your grave'
+
     def __init__(self):
         super().__init__()
         self.subtype = spell.Spell.Subtype.NECROMANCY

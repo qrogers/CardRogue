@@ -17,6 +17,13 @@ class NecroStone(item.Item):
          'damage': 4}
     ]
 
+    text = 'Whenever you resurrect a being deal {} damage to your opponent'
+
+    def info(self):
+        card_info = super().info()
+        card_info['text'] = self.text.format(self.get_stat('damage'))
+        return card_info
+
     def __init__(self):
         super().__init__()
         self.subtype = item.Item.Subtype.ARTIFACT
@@ -26,7 +33,7 @@ class NecroStone(item.Item):
 
     def necro_damage(self, a_being, game):
         if a_being.owner is self.owner:
-            game.deal_damage([(self.owner.enemy, self.stats[self.get_level()]['damage'])])
+            game.deal_damage([(self.owner.enemy, self.get_stat('damage'))])
 
     def destroy(self, game):
         game.resurrect_triggers.remove(self.necro_damage)

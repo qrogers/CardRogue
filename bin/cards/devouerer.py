@@ -20,6 +20,8 @@ class Devouerer(being.Being):
          'health': 5}
     ]
 
+    text = 'Cost: Kill one of your beings'
+
     def __init__(self):
         super().__init__()
         self.subtype = being.Being.Subtype.NECROMANCER

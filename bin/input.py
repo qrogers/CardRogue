@@ -53,6 +53,8 @@ class Input:
                 inputs = command.split(' ')
                 if inputs[0] == 'm':
                     self.a_game.add_mana(self.a_game.h_hand[int(inputs[1])])
+                elif inputs[0] == 'game_state':
+                    print(self.a_game.game_state()['player_manapool'])
                 elif inputs[0] == 'c':
                     target = None
                     cost = None

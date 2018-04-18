@@ -13,6 +13,9 @@ class LifeDrain(spell.Spell):
         {'manacost': 1}
     ]
 
+    text = 'Cost: Discard a card' \
+           'Draw a card and deal 3 damage to your opponent'
+
     def __init__(self):
         super().__init__()
         self.subtype = spell.Spell.Subtype.NECROMANCY

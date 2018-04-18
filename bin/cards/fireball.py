@@ -18,9 +18,16 @@ class Fireball(spell.Spell):
          'damage': 5}
     ]
 
+    text = 'Deal {} damage to a being or player'
+
     def __init__(self):
         super().__init__()
         self.subtype = spell.Spell.Subtype.FIRE
+
+    def info(self):
+        card_info = super().info()
+        card_info['text'] = self.text.format(self.get_stat('damage'))
+        return card_info
 
     def effect(self, target, game):
         if self.target_check(target):

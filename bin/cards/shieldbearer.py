@@ -20,6 +20,8 @@ class Shieldbearer(being.Being):
          'health': 6}
     ]
 
+    text = 'At the end of your turn, this being heals 1'
+
     def __init__(self):
         super().__init__()
         self.subtype = being.Being.Subtype.NECROMANCER
